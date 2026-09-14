@@ -1,16 +1,36 @@
-# React + Vite
+# FE Base
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Source base Frontend dùng **Vite + React (JavaScript) + Tailwind CSS**.
 
-Currently, two official plugins are available:
+## Cấu trúc thư mục
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+src/
+├── api/          # Gọi API, axios instance...
+├── components/   # Component dùng chung
+├── hooks/        # Custom hooks
+├── layouts/      # Layout khung trang (Header/Footer/Sidebar...)
+├── pages/        # Các trang chính
+├── utils/        # Hàm tiện ích
+├── App.jsx
+├── main.jsx
+└── index.css     # Import Tailwind
+```
 
-## React Compiler
+## Cài đặt & chạy
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Build production
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+npm run preview
+```
+
+## Biến môi trường
+
+Sao chép `.env.example` thành `.env` và chỉnh sửa theo nhu cầu.
